@@ -1,5 +1,12 @@
+import { AppWrapper } from './App.style';
+import Header from '../components/Header/Header';
+
 function App() {
-  return <div className="App">dsfds</div>;
+  return (
+    <AppWrapper>
+      <Header />
+    </AppWrapper>
+  );
 }
 
 export default App;
