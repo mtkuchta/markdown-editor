@@ -16,5 +16,7 @@ export const ViewContainer = styled.div`
   grid-template-areas:
     'sidebar header'
     'sidebar main';
-  transform: translateX(-250px);
+  transform: ${({ isMenuVisible }) => (isMenuVisible ? 'translate(0)' : 'translate(-250px)')};
+  transition: 0.4s;
+  transition-timing-function: ease;
 `;

@@ -3,12 +3,18 @@ import MenuIcon from '../../assets/icons/icon-menu.svg';
 import DocumentIcon from '../../assets/icons/icon-document.svg';
 import SaveIcon from '../../assets/icons/icon-save.svg';
 import DeleteIcon from '../../assets/icons/icon-delete.svg';
+import CloseIcon from '../../assets/icons/icon-close.svg';
 
-const Header = () => {
+const Header = ({ isMenuVisible, toggleMenu }) => {
+  console.log(isMenuVisible);
   return (
-    <StyledHeader>
+    <StyledHeader isMenuVisible>
       <div className="menu-icon-container">
-        <img src={MenuIcon} alt="menu icon" />
+        {isMenuVisible ? (
+          <img src={CloseIcon} alt="menu icon" onClick={toggleMenu} className="close-icon" />
+        ) : (
+          <img src={MenuIcon} alt="menu icon" onClick={toggleMenu} />
+        )}
       </div>
       <div className="file-name-container">
         <img src={DocumentIcon} alt="document icon" />

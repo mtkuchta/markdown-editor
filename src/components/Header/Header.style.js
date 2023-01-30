@@ -21,6 +21,12 @@ export const StyledHeader = styled.header`
     img {
       width: 23px;
       height: 14px;
+      transition: 0.4s;
+    }
+
+    img.close-icon {
+      width: 18px;
+      height: 18px;
     }
   }
 
