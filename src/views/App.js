@@ -1,10 +1,14 @@
-import { AppWrapper } from './App.style';
+import { AppWrapper, ViewContainer } from './App.style';
 import Header from '../components/Header/Header';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 function App() {
   return (
     <AppWrapper>
-      <Header />
+      <ViewContainer>
+        <Sidebar />
+        <Header />
+      </ViewContainer>
     </AppWrapper>
   );
 }
