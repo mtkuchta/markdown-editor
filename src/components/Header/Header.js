@@ -6,7 +6,6 @@ import DeleteIcon from '../../assets/icons/icon-delete.svg';
 import CloseIcon from '../../assets/icons/icon-close.svg';
 
 const Header = ({ isMenuVisible, toggleMenu }) => {
-  console.log(isMenuVisible);
   return (
     <StyledHeader isMenuVisible>
       <div className="menu-icon-container">

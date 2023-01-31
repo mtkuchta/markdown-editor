@@ -1,13 +1,19 @@
 import { useState } from 'react';
-import { AppWrapper, ViewContainer } from './App.style';
+import { AppWrapper, StyledMain, ViewContainer } from './App.style';
 import Header from '../components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
+import ViewBar from '../components/ViewBar/ViewBar';
 
 function App() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [activeView, setActiveView] = useState('markdown');
 
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
+  };
+
+  const toggleView = () => {
+    setActiveView(activeView === 'markdown' ? 'preview' : 'markdown');
   };
 
   return (
@@ -15,6 +21,9 @@ function App() {
       <ViewContainer isMenuVisible={isMenuVisible}>
         <Sidebar />
         <Header isMenuVisible={isMenuVisible} toggleMenu={toggleMenu} />
+        <StyledMain>
+          <ViewBar activeView={activeView} toggleView={toggleView} />
+        </StyledMain>
       </ViewContainer>
     </AppWrapper>
   );
