@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif; */
+/* font-family: 'Commissioner', sans-serif; */
 
 *{
     margin:0;

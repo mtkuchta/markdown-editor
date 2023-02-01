@@ -1,7 +1,19 @@
-import { StyledSidebar } from './Sidebar.style';
+import { useContext } from 'react';
+import { StyledSidebar, StyledLogo, StyledText } from './Sidebar.style';
+import Button from '../Button/Button';
+import DocumentsList from '../DocumentsList/DocumentsList';
+import { DocumentsContext } from '../../providers/DocumentsProvider';
 
 const Sidebar = () => {
-  return <StyledSidebar>dupa</StyledSidebar>;
+  const { userDocuments } = useContext(DocumentsContext);
+  return (
+    <StyledSidebar>
+      <StyledLogo>markdown</StyledLogo>
+      <StyledText>my documents</StyledText>
+      <Button text="+ New Document" buttonWidth="202px" onClick={() => console.log('new document')} />
+      <DocumentsList documents={userDocuments} />
+    </StyledSidebar>
+  );
 };
 
 export default Sidebar;
