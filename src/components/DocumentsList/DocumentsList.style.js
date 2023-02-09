@@ -4,6 +4,7 @@ export const StyledList = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
   padding-top: 24px;
 `;
 

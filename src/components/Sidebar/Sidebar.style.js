@@ -7,6 +7,7 @@ export const StyledSidebar = styled.aside`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.color_900};
   padding-left: 24px;
+  padding-bottom: 30px;
 `;
 
 export const StyledLogo = styled.p`
