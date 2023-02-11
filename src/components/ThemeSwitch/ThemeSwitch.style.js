@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ReactComponent as DarkModeIcon } from '../../assets/icons/icon-dark-mode.svg';
+import { ReactComponent as LightModeIcon } from '../../assets/icons/icon-light-mode.svg';
 
 export const StyledContainer = styled.div`
   width: 50%;
@@ -38,7 +40,7 @@ export const StyledLabel = styled.label`
     content: '';
     height: 12px;
     width: 12px;
-    left: 6px;
+    left: 30px;
     bottom: 6px;
     background-color: ${({ theme }) => theme.colors.color_100};
     -webkit-transition: 0.4s;
@@ -51,8 +53,20 @@ export const StyledLabel = styled.label`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(24px);
-    -ms-transform: translateX(24px);
-    transform: translateX(24px);
+    -webkit-transform: translateX(-24px);
+    -ms-transform: translateX(-24px);
+    transform: translateX(-24px);
+  }
+`;
+
+export const StyledDarkModeIcon = styled(DarkModeIcon)`
+  path {
+    fill: ${({ theme, $isDarkModeActive }) => ($isDarkModeActive ? theme.colors.color_100 : theme.colors.color_600)};
+  }
+`;
+
+export const StyledLightModeIcon = styled(LightModeIcon)`
+  path {
+    fill: ${({ theme, $isDarkModeActive }) => ($isDarkModeActive ? theme.colors.color_6100 : theme.colors.color_100)};
   }
 `;
