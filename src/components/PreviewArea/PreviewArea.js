@@ -6,10 +6,10 @@ import { DocumentsContext } from '../../providers/DocumentsProvider';
 const PreviewArea = () => {
   const { isDarkModeActive } = useContext(ModeContext);
   const { currentDocument } = useContext(DocumentsContext);
-  console.log(isDarkModeActive);
+  console.log(currentDocument);
   return (
     <StyledContainer $isDarkModeActive={isDarkModeActive}>
-      <textarea value={'sfdsfffffffffffffffffffffffffffffffff'} />
+      <textarea value={currentDocument.content} />
     </StyledContainer>
   );
 };

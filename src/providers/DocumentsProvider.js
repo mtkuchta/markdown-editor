@@ -5,7 +5,7 @@ export const DocumentsContext = React.createContext();
 
 export const DocumentsProvider = ({ children }) => {
   const [userDocuments, setUserDocuments] = useState(importedData);
-  const [currentDocument, setCurrentDocument] = useState(importedData);
+  const [currentDocument, setCurrentDocument] = useState(importedData[1]);
 
   return <DocumentsContext.Provider value={{ userDocuments, currentDocument }}>{children}</DocumentsContext.Provider>;
 };
